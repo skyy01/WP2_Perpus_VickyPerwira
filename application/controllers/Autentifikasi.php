@@ -112,7 +112,7 @@ class Autentifikasi extends CI_Controller
                 'email' => htmlspecialchars($email),
                 'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                'role_id' => 2,
+                'role_id' => 1,
                 'is_active' => 1,
                 'tanggal_input' => time()
             ];
@@ -130,6 +130,14 @@ class Autentifikasi extends CI_Controller
     public function gagal()
     {
       $this->load->view('autentifikasi/gagal');
+    }
+    public function logout()
+    {
+    $this->session->unset_userdata('email');
+    $this->session->unset_userdata('role_id');
+
+    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Anda telah logout!!</div>');
+    redirect('autentifikasi');
     }
 
   }
