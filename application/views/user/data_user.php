@@ -8,7 +8,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nama User</th>
+                        <th scope="col">Nama</th>
                         <th scope="col">Email</th>
                         <th scope="col" nowrap>Member Sejak</th>
                         <th scope="col">Image</th>
