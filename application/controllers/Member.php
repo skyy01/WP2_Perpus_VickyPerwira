@@ -50,12 +50,14 @@ class Member extends CI_Controller
         $this->form_validation->set_rules('alamat', 'Alamat Lengkap', 'required', [
             'required' => 'Alamat Belum diis!!'
         ]);
-        $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email|is_unique[user.email]', [
+        $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email|is_unique[user.ema
+il]', [
             'valid_email' => 'Email Tidak Benar!!',
             'required' => 'Email Belum diisi!!',
             'is_unique' => 'Email Sudah Terdaftar!'
         ]);
-        $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
+        $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password
+2]', [
             'matches' => 'Password Tidak Sama!!',
             'min_length' => 'Password Terlalu Pendek'
         ]);
@@ -75,7 +77,6 @@ class Member extends CI_Controller
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! akun anggota anda sudah dibuat.</div>');
         redirect(base_url());
     }
-
     public function myProfil()
     {
         $data['judul'] = 'Profil Saya';
@@ -93,7 +94,6 @@ class Member extends CI_Controller
         $this->load->view('templates/templates-user/modal');
         $this->load->view('templates/templates-user/footer', $data);
     }
-
     public function ubahProfil()
     {
         $data['judul'] = 'Profil Saya';
@@ -144,7 +144,6 @@ class Member extends CI_Controller
             redirect('member/myprofil');
         }
     }
-
     public function logout()
     {
         $this->session->unset_userdata('email');

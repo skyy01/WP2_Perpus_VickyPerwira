@@ -5,8 +5,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Login Member</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                    <span aria-hidden="true">&times;</span </button>
             </div>
             <form action="<?= base_url('member'); ?>" method="post">
                 <div class="modal-body">
@@ -77,15 +76,14 @@
                 <h5 class="modal-title">Informasi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <span class="alert alert-message alert-success">Waktu Pengambilan Buku 1x24 jam dari Booking!!!</span>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-outline-info" href="<?= base_url(); ?>">Ok</a>
+                </button </div>
+                <div class="modal-body">
+                    <span class="alert alert-message alert-success">Waktu Pengambilan Buku 1x24 jam dari Booking!!!</span>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-outline-info" href="<?= base_url(); ?>">Ok</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--/modal info -->
+    <!--/modal info -->
